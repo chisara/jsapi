@@ -10,6 +10,7 @@ var serverName = "tableau.russellchristopher.org",
 
 var protocalType = "https://"; 
 
+//Set path to view (after hostname)
 var viewLocation = "/t/SkunkWorks/views/JavaScriptTarget/Dashboard";
 
 //Set for function showExportCrosstabDialog()
@@ -17,6 +18,20 @@ var sheetToExport = "Profit by Subcategory";
 
 //Set for function exportData()
 var dataToExport = "Sales by Date";
+
+//Set for function changeParameterValueAsync()
+var parameterName = 'Top Customers';
+var parameterValue = 10;
+
+//Set for function activateSheetRange()
+var activateRange = 'Sales by Date';
+
+
+//Set for function activateSheetCategorical()
+var activateCategory = 'Profit by Subcategory';
+
+//Set for function activateSheetDatePeriod()
+var activatePeriod = 'Shipped by Date';
 
 
     
@@ -770,9 +785,9 @@ function deactivateEventListeners() {
 function changeParameterValueAsync() {
 
     mainWorkbook = mainViz.getWorkbook();
-    // Set Top Customers parameter to 10
-    mainWorkbook.changeParameterValueAsync('Top Customers', 10).then(function () {
-        alertOrConsole("'Top Customers' parameter set to 10");
+    // Set 'parameterName' parameter to 'parameterValue'
+    mainWorkbook.changeParameterValueAsync(parameterName, parameterValue).then(function () {
+        alertOrConsole(parameterName + " parameter set to " + parameterValue);
     });
 }
 
@@ -896,15 +911,15 @@ function showAsync() {
 }
 
 function activateSheetRange() {
-    mainWorkbook = mainViz.getWorkbook().activateSheetAsync('Sales by Date');
+    mainWorkbook = mainViz.getWorkbook().activateSheetAsync(activateRange);
 }
 
 function activateSheetCategorical() {
-    mainWorkbook = mainViz.getWorkbook().activateSheetAsync('Profit by Subcategory');
+    mainWorkbook = mainViz.getWorkbook().activateSheetAsync(activateCategory);
 }
 
 function activateSheetDatePeriod() {
-    mainWorkbook = mainViz.getWorkbook().activateSheetAsync('Shipped by Date');
+    mainWorkbook = mainViz.getWorkbook().activateSheetAsync(activatePeriod);
 }
 
 function activateSheetRelative() {
