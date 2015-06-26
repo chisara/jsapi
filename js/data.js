@@ -935,12 +935,15 @@ var data = {
   }]
 };
 
+$(function(){}
+  )
+
  var getMenuItem = function (itemData) {
         var item = $("<li>")
-            .append(
-        $("<a>", {
+            .append( $("<a>", {
             onClick: itemData.link,
-            html: itemData.name
+            html: itemData.name, 
+           // onClick: "getElementById("h2Des").innerHTML=" + itemData.description
         }));
         if (itemData.sub) {
             var subList = $("<ul>");
@@ -951,6 +954,8 @@ var data = {
         }
         return item;
     };
+
+
     
     var $menu = $("#menu");
     $.each(data.menu, function () {
