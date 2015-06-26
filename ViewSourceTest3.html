@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
+<link rel='stylesheet' href='https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css' />
+
+
+<body>
+
+<p>Click the button to display the array values after the split.</p>
+
+<button onclick="myFunction()">Try it</button>
+<button onclick="mySource()">source</button>
+<p id="demo"></p>
+<code class="prettyprint lang-js" id="source"></code>
+
+<script>
+var options = "cat, bear";
+var optionsVar = "options";
+function myFunction() 
+{
+    var str = options;
+    var res = str.split(" ");
+    document.getElementById("demo").innerHTML = res;
+}
+
+function mySource() {
+   var src = myFunction.toString();
+    var optionsTxt = options.valueOf();
+    var rep = src.replace(optionsVar,optionsTxt);
+    alert(src);
+    document.getElementById("source").innerText = rep;
+    prettyPrint();
+}
+
+function mySource2() {
+prettyPrint();
+}
+
+</script>
+
+</body>
+</html>
