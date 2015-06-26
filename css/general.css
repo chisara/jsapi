@@ -206,12 +206,13 @@
 
   #bottom {
   	float:left;
-  	width:100%;
+  	width:89.75%;
   	padding-left: 1%;
+    padding-right:1%;
   	border: 2px dotted #CCCCCC; /* grey */
   	font-size: 0.875em;
   	line-height: 1.35;
-  	min-height: 9em;
+  	min-height: 11em;
   }
 
 /*******************************************************************************
