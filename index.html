@@ -5,9 +5,8 @@
 	<link type="text/css" rel="stylesheet" href="css/general.css">
 	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css">
 
-	<script src="http://public.tableau.com/javascripts/api/tableau-2.0.0.js"></script>
-	<script src="js/mainScript.js"></script>
-	<script src="js/data.js"></script>
+	
+
 
 	<title>JavaScript API</title>
 
@@ -26,13 +25,14 @@
 			<div id="taskSideBar">
 				<!-- Menu -->
 				<h2 class="demoHeaders">Start Here</h2>
-				<ul style="width:90%;" id="menu">
+				<ul id="menu"></ul>
+<!-- 				<ul style="width:90%;" id="menu" >
 					<li><a onClick="renderViz()">Render Viz</a></li>
 					<li><a onClick="renderVizMoreOptions()">Render Viz with More Options</a></li>
 					<li><a onClick="dispose()">Dispose Viz</a></li>
 					<li>Item 4</li>
-					<li>Item 5</li>
-				</ul>
+					<li>Item 5</li> 
+				</ul> -->
 
 
 
@@ -49,7 +49,7 @@
 			<p> Parameter Controls:</p>
 			<div id="outputType"> 
 				<p>Output to:</p>
-				<input type="radio" class="tasksSideBar" name="alertOrConsole" value="Alert" checked>
+				<input type="radio"  class="tasksSideBar" name="alertOrConsole" value="Alert" checked>
 				<label for="alertorConsole">Alert</label><br>
 				<input type="radio" class="tasksSideBar" name="alertOrConsole" value="Console">
 				<label for="alertorConsole">Console</label>
@@ -69,12 +69,17 @@
 			Other IP</a> | © 2003-2012 Tableau Software. All Rights Reserved.</p>
 		</div>
 
-
+		<script src="http://public.tableau.com/javascripts/api/tableau-2.0.0.js"></script>
 		<script src="external/jquery/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
+		<script src="js/mainScript.js"></script>
+		<script src="js/data.js"></script>
 		<script>
-		$("#menu").menu();
-		$("#accordion").accordion();
+		$(document).ready(function () {
+		//your code here
+		// $("#menu").menu();
+		  $("#accordion").accordion();
+		});
 
 		</script>
 
