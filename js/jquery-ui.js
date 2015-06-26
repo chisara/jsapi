@@ -6372,7 +6372,8 @@ var menu = $.widget( "ui.menu", {
 		menus: "ul",
 		position: {
 			my: "left-1 top",
-			at: "right top"
+			//at: "right top"
+			at: "left+25 bottom"
 		},
 		role: "menu",
 
