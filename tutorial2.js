@@ -2,13 +2,22 @@
 // Russell Christopher v1.7 Feb-2013, CSS & Harness modified from Justin Rockwood's examples
 //////////////////////////////////////////////////////////////////////////////
 
+
 //////////////////////////////////////////////////////////////////////////////
 // Local Variables
 //////////////////////////////////////////////////////////////////////////////
+
+
+
+
+//Consider these variables as reference at this point, with placeholder data for functions.
+//Functions can be sent from the main UI in "index.html"
+//eg. applyFilterAsync("\"Category\", \"Technology\", \"REPLACE\"") 
+
 var serverName = "tableau.russellchristopher.org",
     mainViz, mainWorkbook, newCustomView, dataSources;
 
-var protocalType = "https://"; 
+var protocolType = "https://"; 
 
 //Set path to view (after hostname)
 var viewLocation = "/t/SkunkWorks/views/JavaScriptTarget/Dashboard";
@@ -33,8 +42,16 @@ var activateCategory = 'Profit by Subcategory';
 //Set for function activateSheetDatePeriod()
 var activatePeriod = 'Shipped by Date';
 
-
+//Set for function activateSheetRelative()
+var activateRelative = 'Profit by Date';
     
+//Set for function applyFilterAsync()
+var filterOptions = "\"Category\", \"Technology\", \"REPLACE\"";
+
+//Set for function applyFilterMoreAsync();
+
+var moreFilterOptions = "\"Category\", \"Technology\", \"REMOVE\"";
+
 // REMEMBER to change the reference to tableau_v8.debug.js in index.html so that 
 // it points to the right server
 
@@ -473,7 +490,7 @@ function renderViz() {
 
     // Define variables for viz
     var mainVizDiv = $("#mainViz");
-    var mainWorkbookUrl = protocalType + serverName + viewLocation;
+    var mainWorkbookUrl = protocolType + serverName + viewLocation;
     var mainVizOptions = {
         hideTabs: false,
         hideToolbar: false,
@@ -492,7 +509,7 @@ function renderVizMoreOptions() {
 
     // Define variables for viz
     var mainVizDiv = $("#mainViz");
-    var mainWorkbookUrl = protocalType + serverName + viewLocation;
+    var mainWorkbookUrl = protocolType + serverName + viewLocation;
     var mainVizOptions = {
         hideTabs: false,
         hideToolbar: false,
@@ -923,7 +940,7 @@ function activateSheetDatePeriod() {
 }
 
 function activateSheetRelative() {
-    mainWorkbook = mainViz.getWorkbook().activateSheetAsync('Profit by Date');
+    mainWorkbook = mainViz.getWorkbook().activateSheetAsync(activateRelative);
 }
 
 function applyHierarchicalFilterAsync() {
@@ -935,7 +952,8 @@ function applyFilterAsync() {
 
     var onSuccess = function (sheet) {
         // Replace any current filter on Category with "Technology"
-        sheet.applyFilterAsync("Category", "Technology", "REPLACE");
+        sheet.applyFilterAsync(filterOptions);
+        document.getElementById("demo").innerHTML = "sheet.applyFilterAsync("filterOptions");";
     };
     var onError = function (err) {
         alertOrConsole(err);
@@ -950,7 +968,7 @@ function applyFilterMoreAsync() {
     var newSheet = mainWorkbook.getActiveSheet();
     var onSuccess = function () {
         // Remove 'Technology' selection from the quick filter
-        newSheet.applyFilterAsync("Category", "Technology", "REMOVE");
+        newSheet.applyFilterAsync(moreFilterOptions);
 
     };
     var onError = function (err) {
