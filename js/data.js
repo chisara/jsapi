@@ -13,13 +13,13 @@ var data = {
       name: "Render Viz",
       color: "#231F20",
       describe: "To begin, you MUST render a viz. So, start here.",
-      link: '0-0',
+      link: 'renderViz()',
       sub: null,
     },{
       name: "Render Viz with more Options",
       color: "#231F20",
       describe: "Render a viz with a filter and parameter selection in place",
-      link: '0-1',
+      link: 'renderVizMoreOptions()',
       sub: null,
     }]
   },{
@@ -30,7 +30,7 @@ var data = {
       name: "Dispose viz",
       color: "#002261",
       describe: "Clear out the current viz being displayed",
-      link: '1-0',
+      link: 'dispose()',
       sub: null,
     },{
       name: "Download Workbook",
@@ -939,7 +939,7 @@ var data = {
         var item = $("<li>")
             .append(
         $("<a>", {
-            href: '#' + itemData.link,
+            onClick: itemData.link,
             html: itemData.name
         }));
         if (itemData.sub) {
