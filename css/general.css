@@ -1,0 +1,314 @@
+
+/*******************************************************************************
+ * General Styles
+ ******************************************************************************/
+
+
+ body {
+ 	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+ 	font-size: 0.875em;
+ 	line-height: 1.35;
+ }
+
+ h1 {
+ 	font-weight: 100;
+ 	line-height: 1.167;
+ 	color: #707070;
+ }
+ h1, h2, h3, h4 {
+ 	font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+ }
+
+ h1 {
+ 	font-weight: 100;
+ 	line-height: 1.167;
+ 	color: #707070;
+ }
+
+ h2, h3, h4 {
+ 	font-weight: normal;
+ 	margin: 0;
+ 	padding-bottom: 5px;
+ 	padding-top: 5px;
+ 	color: #DB7100;
+ }
+
+ h3 {
+ 	font-size: 1.5em;
+ }
+
+/*******************************************************************************
+ * Title Bar
+ ******************************************************************************/
+
+ #head {
+ 	top: 0;
+ 	left: 0;
+ 	right: 0;
+ 	padding: 0 10px;
+ 	height: 48px;
+ 	overflow: hidden;
+ 	border: 2px dotted #000099; /* blue*/
+ 	width:100%;
+ }
+
+ #head h1 {
+ 	padding: 0;
+ 	margin: 0 12px 0 0;
+ 	line-height: 48px;
+ 	display: inline;
+
+ }
+
+ #head h2 {
+ 	font-size: 16px;
+ 	display: inline;
+ 	text-align: right;
+ }
+
+ #body{
+ 	float: left;
+ 	width:1500px;
+ 	height:850px;
+ 	padding-left: 1%;
+ 	border: 2px dotted #DB7100; /* orange */
+ }
+
+
+/*******************************************************************************
+ * Side Bar - west
+ ******************************************************************************/
+
+ #left {
+ 	/*		border-width: 0;*/
+ 	float: left;
+ 	width: 18%;
+ 	padding-left: 1%;
+ 	border: 2px dotted #DB7100; /* orange */
+ 	min-height: 700px;
+ 	overflow: auto;
+ 	overflow-x:hidden;
+ }
+
+ #left h4 {
+ 	margin: 0;
+ 	padding-bottom: 2px;
+ 	padding-top: 2px;
+ 	color: #DB7100;
+ }
+
+ #tasksSideBar {
+ 	border-width: 0 1px 1px 0;
+ 	padding: 10;
+ }
+
+ #tasksSideBar ul {
+ 	list-style-type: none;
+ 	padding: 0;
+ }
+
+ #tasksSideBar ul li.activity {
+ 	display: normal;
+ 	height: 20px;
+ 	padding-left: 20px;
+ 	margin-bottom: 5px;
+ 	border: 1px solid transparent;
+ 	font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+ 	font-size: 1em;
+
+ 	cursor: pointer;
+ }
+
+ #tasksSideBar ul li.activity.ui-state-hover {
+ 	border-color: #999;
+ 	background-color: #dadada;
+ }
+
+ #tasksSideBar ul li.activity.ui-state-active {
+ 	border-color: #bbb;
+ 	background-color: #f6f6f6;
+ }
+
+ #outputType label{
+
+ 	display: normal;
+ 	height: 20px;
+ 	margin-bottom: 5px;
+ 	border: 1px solid transparent;
+ 	font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+ 	font-size: 1em;
+ }
+
+/*******************************************************************************
+ * Side Bar - west
+ ******************************************************************************/
+
+ #right {
+ 	/*		border-width: 0;*/
+ 	float:left; 
+ 	width: 16%;
+ 	padding-left: 1%;
+ 	margin-left:1em;
+ 	border: 2px dotted #FF66FF; /* pink */
+ 	min-height: 700px;
+ 	font-family: 'Segoe UI Light', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+ }
+
+/*******************************************************************************
+ * Main Pane
+ ******************************************************************************/
+
+ #center {
+ 	float: left;
+ 	width: 60%;
+ 	padding-left: 1%;
+ 	border: 2px dotted #660066; /* purple */
+ 	min-height: 700px;
+ 	width: 800px;
+ }
+
+
+ #twitterVizContainer {
+ 	border-width: 1px 0 0 0;
+ 	padding: 0;
+ 	overflow: hidden;
+ }
+
+ #tableauViz {
+ 	position: relative;
+ }
+
+/*******************************************************************************
+ * Viz Area
+ ******************************************************************************/
+
+/*	#tableauViz{
+  left: 12px;
+  top: 60px;
+  right: 12px;
+  bottom: 12px;
+  border: 2px dotted #00FF00; }*/ /* green */
+
+
+  #tableauVizArea .placeholder {
+  	font-size: 1.5em;
+  	font-weight: 100;
+  	line-height: 1.167;
+  	color: #707070;
+  	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	margin-top: -0.75em;
+  	margin-left: -75px;
+  	width: 150px;
+  	text-align: center;
+  }
+
+  #bottom {
+  	float:left;
+  	width:100%;
+  	padding-left: 1%;
+  	border: 2px dotted #CCCCCC; /* grey */
+  	font-size: 0.875em;
+  	line-height: 1.35;
+  	min-height: 9em;
+  }
+
+/*******************************************************************************
+ * Footer
+ ******************************************************************************/
+
+ #footer {
+ 	float:left;
+ 	width:100%;
+ 	font-size: 11px;
+ 	line-height: 1.666em;
+ 	border-width: 1px 0 0 0;
+ 	color: #999;
+ 	text-align: center;
+ 	padding: 0 4px;
+ 	border: 2px dotted #33CCFF; /* teal */
+ 	font-family: 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+ }
+
+ #footer a, #footer a:visited {
+ 	text-decoration: none;
+ 	color: #999;
+ }
+
+ #footer a:hover {
+ 	text-decoration: underline;
+ 	color: #999;
+ }
+
+/*******************************************************************************
+ * Behavior-based CSS
+ ******************************************************************************/
+
+ .fillMyContainer {
+ 	position: absolute;
+ 	top: 0;
+ 	right: 0;
+ 	bottom: 0;
+ 	left: 0;
+ }
+
+ .noTextSelection {
+ 	-webkit-touch-callout: none;
+ 	-webkit-user-select: none;
+ 	-khtml-user-select: none;
+ 	-moz-user-select: none;
+ 	-ms-user-select: none;
+ 	user-select: none;
+ }
+
+/*******************************************************************************
+ * Stuff that came with JQueryUI
+ ******************************************************************************/
+ #layoutContainer {
+ 	overflow: hidden;
+ 	position: relative;
+ 	height:500px;
+ }
+ .ui-widget-content {
+ 	border-color: #bbb;
+ }
+
+ .demoHeaders {
+ 	margin-top: .005em;
+ 	font-size: 1.5em;
+ }
+ #dialog-link {
+ 	padding: .4em 1em .4em 20px;
+ 	text-decoration: none;
+ 	position: relative;
+ }
+ #dialog-link span.ui-icon {
+ 	margin: 0 5px 0 0;
+ 	position: absolute;
+ 	left: .2em;
+ 	top: 50%;
+ 	margin-top: -8px;
+ }
+ #icons {
+ 	margin: 0;
+ 	padding: 0;
+ }
+ #icons li {
+ 	margin: 2px;
+ 	position: relative;
+ 	padding: 4px 0;
+ 	cursor: pointer;
+ 	float: left;
+ 	list-style: none;
+ }
+ #icons span.ui-icon {
+ 	float: left;
+ 	margin: 0 4px;
+ }
+ .fakewindowcontain .ui-widget-overlay {
+ 	position: absolute;
+ }
+ select {
+ 	width: 200px;
+ }
