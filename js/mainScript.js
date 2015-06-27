@@ -58,3 +58,12 @@ function dispose() {
         mainViz.dispose();
     }
 }
+
+function mySource(aFunction) {
+    var src = aFunction.toString();
+    //var optionsTxt = options.valueOf();
+    //var rep = src.replace(optionsVar,optionsTxt);
+    //alert(src);
+    document.getElementById("source").innerText = src;
+    prettyPrint();
+}

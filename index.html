@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<link type="text/css" rel="stylesheet" href="css/general.css">
 	<link type="text/css" rel="stylesheet" href="css/jquery-ui.css">
-
+    <link type="text/css" rel="stylesheet" href="https://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css">
 	
 
 
@@ -53,7 +53,8 @@
 				<h3>Description</h3>
 				<div>Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</div>
 				<h3>Code</h3>
-				<div>Phasellus mattis tincidunt nibh.</div>
+				<pre class="prettyprint lang-js" id="source"></pre>
+                
 			</div>	
 		</div>
 	</div>
@@ -67,13 +68,15 @@
 		</div>
 
 		<script src="http://public.tableau.com/javascripts/api/tableau-2.0.0.js"></script>
+        <script src="http://css-tricks.com/examples/ViewSourceButton/prettify/prettify.js"></script>
 		<script src="external/jquery/jquery.js"></script>
 		<script src="js/jquery-ui.js"></script>
 		<script src="js/mainScript.js"></script>
 		<script src="js/data.js"></script>
 		<script>
 		$(document).ready(function () {
-		//your code here
+		mySource(renderViz);
+        //your code here
 		// $("#menu").menu();
 		$("#accordion").accordion();
 	});
